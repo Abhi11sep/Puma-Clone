@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* TOP NAVBAR */
+#topNavBar {
+    text-align: center;
+    padding: 11px 0px;
+    font-weight: 600;
+}
+
+/* MAIN NAVBAR */
+#navBar {
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.2em 2em;
+}
+
+/* NAVBAR FIRST */
+#navBar1 {
+    /* border:1px solid white */
+}
+
+#navBar1 img {
+    width: 40px
+}
+
+/* NAVBAR SECOND */
+#navBar2 {
+    display: flex;
+    justify-content: space-around;
+    /* border:1px solid white; */
+    padding-right: 150px;
+    align-items: center;
+}
+
+#navBar2 a {
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 0px 1.7em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* NAVBAR THIRD */
+#navBar3 {
+    display: flex;
+    justify-content: space-around;
+    /* border:1px solid white */
+}
+
+#navBar3 button {
+    padding: 0px 15px;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid white
+}
+
+/* CATEGORIES */
+#category {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 50px auto;
+    height: 120px;
+}
+
+#category p {
+    border: 2px solid rgb(240, 154, 111);
+    background-color: rgb(202, 199, 199);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    box-shadow: inset 0 0 0 4px white;
+}
+
+/* BANNER FIRST */
+.banner {
+    position: relative;
+}
+
+.banner_center {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.banner h1 {
+    font-size: 43px;
+    font-weight: 600;
+}
+
+.black_p {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.grey_p {
+    font-size: 19px;
+    font-weight: 100;
+    color: rgb(83, 82, 82);
+    padding-top: 5px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.blk_btn{
+    background-color: black;
+    color: white;
+    border: 0px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* BANNER TYPICAL */
+.banner_left {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    translate: -50% -50%;
+    z-index: 2;
+    width:80%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* SPEEDCAT */
+.black_h1_mid{
+    text-align: center;
+    font-size: 45px;
+}
+.grey_p_mid{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(147, 145, 145);
+}
+.heading_center{
+    padding: 50px 0px 30px 0px;
+}
+
+.speedCat_div{
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:15px;
+    position: relative;
+}
+
+.white_h1_mid{
+    position: absolute;
+    left:50%;
+    bottom: 0.5%;
+    width:80%;
+    translate: -50% -50%;
+    color: white;
+}
+
+/* BANNER PALERMO */
+.white_h1{
+    font-size: 43px;
+    font-weight: 600;
+    color: white;
+}
+
+.white_p{
+    color:white;
+    font-size: 26px;
+}
+
+.text_mid{
+    text-align: center;
+      left: 19%;
+}
+
+.white_btn{
+    background-color: white;
+    color:black;
+    font-weight: 800;
+    margin-top: 25px;
+}
+ /* SHOE GRID */
+.shoe_div{
+    grid-template-columns: repeat(3,1fr);
+}
+.sml{
+    font-size: 30px;
+}
+.shoe_img img{
+ height:450px;
+}
+/* TRACK GRID */
+.track_div{
+    grid-template-columns: repeat(4,1fr);
+}
+.track_img img{
+    height: auto;
+}
+.vsml{
+    font-size: 25px;
+    z-index: 2;
+}
+/* SNEAKER GRID */
+.snk_div{
+    grid-template-columns: repeat(5,1fr);
+    position: relative;
+    width: fit-content;
+}
+/* layer on image */
+.shadow_img::after {  
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.03) 20%,
+    rgba(0,0,0,0.10) 40%,
+    rgba(0,0,0,0.20) 65%,
+    rgba(0,0,0,0.35) 100%
+);
+}
+
+/* GEAR UP */
+.black_h1_left{
+    margin-left: 2%;
+}
+.gear_img img{
+    height:470px
+}
+.mar-less{
+    margin:20px 0px 0px 0px;
+}
+
+/* CAROSOULE */
+    .carousel{
+    width:97%;
+    height:400px;
+    overflow:hidden;
+    position:relative;
+    border-radius:20px;
+    margin: 10px 20px;
+}
+
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform 2s ease-in-out;
+}
+
+.slides img{
+    width:325px;
+    height:325px;
+    object-fit:cover;
+    flex-shrink:0;
+    margin:0px 10px;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:40%;
+    transform:translateY(-50%);
+    padding:10px 15px;
+    border:none;
+    background:black;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    z-index:10;
+    border-radius: 50%;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}

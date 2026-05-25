@@ -1,0 +1,92 @@
+let cont = document.getElementById("cont");
+let tot_div = document.getElementById("total_div")
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+
+for (let i = 0; i < cart.length; i++) {
+    total = total + (cart[i].price * cart[i].qty)
+}
+
+function showCartlist(cart) {
+
+    cont.innerHTML = "";
+    tot_div.innerHTML="";
+    cart.forEach(el => {
+        let box = document.createElement("div");
+        box.setAttribute("class", "box");
+        let title = document.createElement("h1");
+        title.innerText = el.title;
+        let img = document.createElement("img");
+        img.src = el.image;
+        let price = document.createElement("h3");
+        price.innerHTML = `&#8377 ${el.price}`
+        let rm_btn = document.createElement("button")
+        rm_btn.innerText = "Remove";
+        rm_btn.addEventListener("click", () => {
+            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            cart.splice(x, 1)
+            total = total - (el.price * el.qty)
+            localStorage.setItem("cart", JSON.stringify(cart));
+            showCartlist(cart)
+        })
+
+
+        let inc_btn = document.createElement("button")
+        inc_btn.innerText = "+";
+        inc_btn.addEventListener("click", () => {
+            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            cart[x].qty++;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            total = total + (el.price)
+            showCartlist(cart)
+        })
+
+        let qty = document.createElement("p");
+        qty.innerText = el.qty;
+
+        let dec_btn = document.createElement("button")
+        dec_btn.innerText = "-";
+        dec_btn.addEventListener("click", () => {
+            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            if(cart[x].qty===1){
+                 cart.splice(x, 1)
+            }else{
+                cart[x].qty--;
+            } 
+            localStorage.setItem("cart", JSON.stringify(cart));
+            total = total - (el.price)
+            showCartlist(cart)
+        })
+        let details = document.createElement("div");
+        details.setAttribute("class", "details")
+
+        let btm_box = document.createElement("div");
+        btm_box.setAttribute("class", "btm_box")
+
+        let qty_box = document.createElement("div");
+        qty_box.setAttribute("class", "qty_box")
+
+
+        qty_box.append(dec_btn, qty, inc_btn)
+        btm_box.append(price, rm_btn, qty_box)
+        details.append(title, btm_box)
+        box.append(img, details);
+        cont.append(box);
+    })
+
+    let total1_div = document.createElement("h2");
+    let total2_div = document.createElement("p");
+    total1_div.innerHTML = `Your subtotal is: ${total}`;
+    total2_div.innerHTML = `The shipment will take 7 working days to arrive!!`;
+     let pay_btn = document.createElement("button")
+     pay_btn.setAttribute("class","btn")
+      pay_btn.innerText = "Make Payment (UPI / Cards)";
+     let cod_btn = document.createElement("button")
+     cod_btn.setAttribute("class","btn")
+      cod_btn.innerText = "Cash On Delivery pay mode";
+       
+    tot_div.append(total2_div, total1_div,pay_btn,cod_btn)
+
+}
+
+showCartlist(cart)
