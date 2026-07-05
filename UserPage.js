@@ -13,7 +13,7 @@ function renderForm() {
         </div>
         <input id="submit" type="submit" value="Login"/>
     </form>`;
-     loginLogic();
+        loginLogic();
 
     } else {
         container.innerHTML = ` <form>
@@ -70,10 +70,10 @@ function signupLogic() {
         alert("Sign Up successfull, please login..")
         login = true;
         console.log("data stored");
-        user_name.value="";
-        mob.value="";
-        pswd.value="";
-        login=true;
+        user_name.value = "";
+        mob.value = "";
+        pswd.value = "";
+        login = true;
         renderForm()
     }
 }
@@ -84,11 +84,11 @@ function loginLogic() {
     let mob = document.getElementById("mobile")
     let pswd = document.getElementById("password")
     let submit = document.getElementById("submit")
-    let auth=false;
+    let auth = false;
 
     submit.addEventListener("click", (e) => {
         e.preventDefault();
-        if ( mob.value !== "" && pswd.value !== "") {
+        if (mob.value !== "" && pswd.value !== "") {
             formSubmit()
         } else {
             alert("Plaese Fill All The Fields")
@@ -101,30 +101,48 @@ function loginLogic() {
         if (!Array.isArray(user)) {
             user = [];
             alert("no users are here")
-            login=false;
+            login = false;
             renderForm();
-        }else{
-           for(let {mobile,password} of user){
-            if(mobile==mob.value && password==pswd.value){
-                auth=true;
-                  mob.value="";
-                  pswd.value="";
-                break;     
+        } else {
+            for (let { mobile, password } of user) {
+                if (mobile == mob.value && password == pswd.value) {
+                    auth = true;
+                    mob.value = "";
+                    pswd.value = "";
+                    break;
+                }
             }
-           }
         }
-                       if(auth){
-                alert("Welcome, redirecting to home page... ")
-                window.location.href = "index.html";
-           }else{
-                alert("signup first, not a member");
-                 login=false;
-                 renderForm();
-            }
-        
+        if (auth) {
+            alert("Welcome, redirecting to home page... ")
+            window.location.href = "index.html";
+        } else {
+            alert("signup first, not a member");
+            login = false;
+            renderForm();
+        }
+
     }
 
 
 }
 
 renderForm();
+
+//href pages
+
+document.getElementById("userIcon").addEventListener("click", () => {
+    window.location = "./UserPage.html"
+})
+
+document.getElementById("wishIcon").addEventListener("click", () => {
+    window.location = "./Wishlist.html"
+})
+
+document.getElementById("cartIcon").addEventListener("click", () => {
+    window.location = "./Cart.html"
+})
+
+document.getElementById("navBar1").addEventListener("click", () => {
+    window.location = "./index.html"
+})

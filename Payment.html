@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="./Payment.css" />
     <link rel="icon" href="./Assests/puma_logo.png" />
-    <link rel="stylesheet" href="./UserPage.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
@@ -38,10 +38,10 @@
 
     </div>
     </div>
+    <div id="loader">
+        <img id="loadingGif" src="./Assests/pay.avif" alt="Loading">
 
-    <div id="container">
     </div>
-
     <div id="main_footer">
         <div id="footer">
 
@@ -115,7 +115,24 @@
     </div>
 
 
-    <script src="./UserPage.js"></script>
+    <script>
+
+        document.getElementById("userIcon").addEventListener("click", () => {
+            window.location = "./UserPage.html"
+        })
+
+        document.getElementById("wishIcon").addEventListener("click", () => {
+            window.location = "./Wishlist.html"
+        })
+
+        document.getElementById("cartIcon").addEventListener("click", () => {
+            window.location = "./Cart.html"
+        })
+
+        document.getElementById("navBar1").addEventListener("click", () => {
+            window.location = "./index.html"
+        })
+    </script>
 </body>
 
 </html>

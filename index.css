@@ -16,23 +16,34 @@
     display: flex;
     justify-content: flex-start;
     padding: 1.2em 2em;
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+    /* border: 5px solid red; */
 }
 
 /* NAVBAR FIRST */
 #navBar1 {
-    /* border:1px solid white */
+    /* border: 5px solid rgb(243, 12, 170) */
 }
 
 #navBar1 img {
     width: 40px
 }
 
+#divContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid rgb(62, 213, 35); */
+}
+
 /* NAVBAR SECOND */
 #navBar2 {
     display: flex;
     justify-content: space-around;
-    /* border:1px solid white; */
-    padding-right: 150px;
+    /* border: 1px solid white; */
+    /* padding-right: 150px; */
     align-items: center;
 }
 
@@ -48,7 +59,7 @@
 #navBar3 {
     display: flex;
     justify-content: space-around;
-    /* border:1px solid white */
+    /* border: 1px solid white */
 }
 
 #navBar3 button {
@@ -57,7 +68,7 @@
     color: white;
     font-weight: 400;
     font-size: 16px;
-    border: 1px solid white
+    /* border: 1px solid white */
 }
 
 /* CATEGORIES */
@@ -120,13 +131,19 @@
     width: 100%;
 }
 
-.blk_btn{
+.blk_btn {
     background-color: black;
     color: white;
     border: 0px;
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.blk_btn:hover {
+    background-color: bisque;
+    color: black;
 }
 
 /* BANNER TYPICAL */
@@ -136,161 +153,432 @@
     left: 45%;
     translate: -50% -50%;
     z-index: 2;
-    width:80%;
+    width: 80%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* SPEEDCAT */
-.black_h1_mid{
+.black_h1_mid {
     text-align: center;
     font-size: 45px;
 }
-.grey_p_mid{
+
+.grey_p_mid {
     margin-top: 15px;
     text-align: center;
     font-size: 20px;
     color: rgb(147, 145, 145);
 }
-.heading_center{
+
+.heading_center {
     padding: 50px 0px 30px 0px;
 }
 
-.speedCat_div{
+.speedCat_div {
     padding: 50px 30px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     position: relative;
 }
 
-.white_h1_mid{
+.white_h1_mid {
     position: absolute;
-    left:50%;
+    left: 50%;
     bottom: 0.5%;
-    width:80%;
+    width: 80%;
     translate: -50% -50%;
     color: white;
 }
 
 /* BANNER PALERMO */
-.white_h1{
+.white_h1 {
     font-size: 43px;
     font-weight: 600;
     color: white;
 }
 
-.white_p{
-    color:white;
+.white_p {
+    color: white;
     font-size: 26px;
 }
 
-.text_mid{
+.text_mid {
     text-align: center;
-      left: 19%;
+    left: 19%;
 }
 
-.white_btn{
+.white_btn {
     background-color: white;
-    color:black;
+    color: black;
     font-weight: 800;
     margin-top: 25px;
 }
- /* SHOE GRID */
-.shoe_div{
-    grid-template-columns: repeat(3,1fr);
+
+/* SHOE GRID */
+.shoe_div {
+    grid-template-columns: repeat(3, 1fr);
 }
-.sml{
+
+.sml {
     font-size: 30px;
 }
-.shoe_img img{
- height:450px;
+
+.shoe_img img {
+    height: 450px;
 }
+
 /* TRACK GRID */
-.track_div{
-    grid-template-columns: repeat(4,1fr);
+.track_div {
+    grid-template-columns: repeat(4, 1fr);
 }
-.track_img img{
+
+.track_img img {
     height: auto;
 }
-.vsml{
+
+.vsml {
     font-size: 25px;
     z-index: 2;
 }
+
 /* SNEAKER GRID */
-.snk_div{
-    grid-template-columns: repeat(5,1fr);
+.snk_div {
+    grid-template-columns: repeat(5, 1fr);
     position: relative;
     width: fit-content;
 }
+
 /* layer on image */
-.shadow_img::after {  
+.shadow_img::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.03) 20%,
-    rgba(0,0,0,0.10) 40%,
-    rgba(0,0,0,0.20) 65%,
-    rgba(0,0,0,0.35) 100%
-);
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.03) 20%,
+            rgba(0, 0, 0, 0.10) 40%,
+            rgba(0, 0, 0, 0.20) 65%,
+            rgba(0, 0, 0, 0.35) 100%);
 }
 
 /* GEAR UP */
-.black_h1_left{
+.black_h1_left {
     margin-left: 2%;
 }
-.gear_img img{
-    height:470px
+
+.gear_img img {
+    height: 470px
 }
-.mar-less{
-    margin:20px 0px 0px 0px;
+
+.mar-less {
+    margin: 20px 0px 0px 0px;
 }
 
 /* CAROSOULE */
-    .carousel{
-    width:97%;
-    height:400px;
-    overflow:hidden;
-    position:relative;
-    border-radius:20px;
+.carousel {
+    width: 97%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
     margin: 10px 20px;
 }
 
-.slides{
-    display:flex;
-    height:100%;
-    transition:transform 2s ease-in-out;
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 2s ease-in-out;
 }
 
-.slides img{
-    width:325px;
-    height:325px;
-    object-fit:cover;
-    flex-shrink:0;
-    margin:0px 10px;
+.slides img {
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0px 10px;
 }
 
 .prev,
-.next{
-    position:absolute;
-    top:40%;
-    transform:translateY(-50%);
-    padding:10px 15px;
-    border:none;
-    background:black;
-    color:white;
-    cursor:pointer;
-    font-size:15px;
-    z-index:10;
+.next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    z-index: 10;
     border-radius: 50%;
 }
 
-.prev{
-    left:10px;
+.prev {
+    left: 10px;
 }
 
-.next{
-    right:10px;
+.next {
+    right: 10px;
+}
+
+#main_footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0px;
+}
+
+#footer {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+#line_1 h3 {
+    margin-left: 88px;
+}
+
+#line_1A {
+    display: flex;
+    justify-content: space-around;
+}
+
+#line_1 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#line_2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#line_3 {
+    font-size: 14px;
+    line-height: 50px;
+}
+
+#footer_bottom {
+    /* border: 2px solid white; */
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#img_1 {
+    width: 350px;
+    height: 40px;
+}
+
+#flag button {
+    padding: 10px 20px;
+    font-size: 25px;
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    background-color: black;
+    align-items: center;
+    gap: 10px;
+}
+
+#flag img {
+    width: 40px;
+}
+
+#img_footer_2 {
+    width: 300px;
+}
+
+#img_footer_3 {
+    width: 200px;
+}
+
+
+
+@media all and (max-width: 940px) {
+    #navBar1 {
+        display: none;
+    }
+
+    #navBar2 a {
+        padding: 0px 8px;
+    }
+
+    #line_3 {
+        display: none;
+    }
+
+    #footer {
+        grid-template-columns: 2fr 1fr;
+        padding-bottom: 10px;
+        padding-left: 30px;
+    }
+
+    #footer_bottom {
+        padding: 10px 0px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #p_3 p {
+        text-align: center;
+    }
+
+    .shoe_img img {
+        height: 250px;
+    }
+
+    .track_div img {
+        height: 300px;
+    }
+
+    #category {
+        width: 95%;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+    #category {
+        display: none;
+    }
+
+    .black_p {
+        font-size: 14px;
+    }
+
+    .banner .blk_head {
+        font-size: 20px;
+    }
+
+    .banner .white_h1 {
+        font-size: 20px;
+    }
+
+    .blk_btn {
+        font-size: 15px;
+    }
+
+    .banner .white_btn {
+        font-size: 14px;
+    }
+
+    .track_div img {
+        height: 300px;
+    }
+
+    .carousel img {
+        width: 200px;
+    }
+
+    .heading_center .black_h1_mid {
+        font-size: 22px;
+    }
+
+    .banner .white_h1_mid {
+        font-size: 20px;
+    }
+
+    .banner .grey_p {
+        font-size: 16px;
+        padding-left: 100px;
+    }
+
+    /* SNEAKER GRID */
+    .snk_div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+        position: relative;
+        width: fit-content;
+    }
+
+    .track_div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    #navBar {
+        padding: 0.5em 1em;
+    }
+
+    #navBar1 {
+        display: block;
+    }
+
+    #navBar2 {
+        display: none;
+    }
+
+    #divContainer {
+        justify-content: flex-end;
+    }
+
+    #footer {
+        grid-template-columns: 1fr;
+    }
+
+    #line_2 {
+        display: none;
+    }
+
+    .track_div img {
+        height: 250px;
+    }
+
+    .carousel img {
+        width: 100px;
+    }
+
+    .shoe_img img {
+        height: 150px;
+    }
+
+}
+
+@media all and (max-width: 425px) {
+
+    #topNavBar {
+        display: none;
+    }
+
+    .track_div img {
+        height: 200px;
+    }
+
+    .shoe_img img {
+        height: 100px;
+    }
+
+    .black_p {
+        font-size: 12px;
+    }
+
+    .banner .blk_head {
+        font-size: 14px;
+    }
+
+    .banner .white_h1 {
+        font-size: 14px;
+    }
+
+    .blk_btn {
+        font-size: 10px;
+    }
+
+    .banner .white_btn {
+        font-size: 10px;
+    }
+
+    .banner .grey_p {
+        display: none;
+    }
 }
