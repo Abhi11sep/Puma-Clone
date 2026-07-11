@@ -25,7 +25,7 @@ function showCartlist(cart) {
     `;
 
         document.getElementById("shopNowBtn").addEventListener("click", () => {
-            window.location = "./new.html";
+            window.location = "./New.html";
         });
 
         return;
