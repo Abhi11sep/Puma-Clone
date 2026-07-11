@@ -8,6 +8,10 @@ blk_btns.forEach(btn => {
     });
 });
 
+const gotoProducts = () => {
+    window.location.href = './New.html';
+}
+
 let index = 0;
 function showSlide() {
     slide.style.transform = `translateX(-${index * 100}%)`;

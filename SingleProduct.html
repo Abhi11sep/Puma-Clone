@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
-    <link rel="stylesheet" href="./Wishlist.css" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./SingleProduct.css">
     <link rel="icon" href="./Assests/puma_logo.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -27,7 +27,8 @@
                 <a href="./New.html">Sale</a>
             </div>
             <div id="navBar3">
-
+                <button id="wishIcon" style="border: none"><i class="fa-solid fa-heart"
+                        style="font-size: 18px;"></i></button>
                 <button id="cartIcon" style="border: none"><i class="fa-solid fa-cart-arrow-down"
                         style="font-size: 18px;"></i></button>
                 <button id="userIcon" style="border: none"><i class="fa-solid fa-user"
@@ -38,7 +39,87 @@
     </div>
     </div>
 
-    <div id="container">
+
+    <div class="product-container">
+
+        <div class="left">
+
+            <img id="productImage">
+        </div>
+
+        <div class="right">
+            <div id="details">
+
+                <h1 id="title"></h1>
+
+                <h2 id="price"></h2>
+
+                <p id="description"></p>
+            </div>
+
+
+            <div class="sizes">
+
+                <div class="size-header">
+                    <h4>Select Size</h4>
+                    <p id="sizeGuideBtn">📏 Size Guide</p>
+                </div>
+
+                <div class="size-options">
+                    <button class="size-btn">XS</button>
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                    <button class="size-btn">XXL</button>
+                </div>
+
+                <div id="sizeModal">
+                    <span id="closeModal">&times;</span>
+                    <img src="./Assests/size_guide.avif">
+                </div>
+
+            </div>
+
+
+            <div class="action-buttons">
+                <button id="favBtn" class="heart-btn">
+                    <i id="heartIcon" class="fa-regular fa-heart"></i>
+                </button>
+
+                <button id="cartBtn" class="cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div id="more_content">
+                <ul>
+                    <li>✓ 100% Original Product</li>
+
+                    <li>🚚 Free Shipping</li>
+
+                    <li>↩ Easy Returns</li>
+
+                    <li>🔒 Secure Payment</li>
+
+                    <li>🏷 Brand : Puma</li>
+                </ul>
+                <ul>
+
+                    <li>👕 Material : Cotton Blend</li>
+
+                    <li>🧺 Wash Care : Machine Wash</li>
+
+                    <li>📦 Sold By : Puma India</li>
+
+                    <li>⭐ 4.7 (238 Ratings)</li>
+
+                    <li>Availability ● In Stock</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 
     <div id="main_footer">
@@ -112,8 +193,10 @@
             </div>
         </div>
     </div>
+
+
     <div id="toast"></div>
-    <script src="./Wishlist.js"></script>
+    <script src="./SingleProduct.js"></script>
 </body>
 
 </html>

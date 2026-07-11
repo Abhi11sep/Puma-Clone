@@ -1,4 +1,4 @@
-let Products = [
+const Products = [
   {
     "id": 1,
     "title": "Men Typographic Regular Fit Crew Neck T-Shirt",
@@ -9,6 +9,18 @@ let Products = [
     "rating": {
       "rate": 3.9,
       "count": 120
+    }
+  },
+  {
+    "id": 38,
+    "title": "Women Regular Fit Flat-Front Trouser",
+    "price": 899,
+    "description": "Upgrade your wardrobe with these women's regular-fit flat-front trousers. Designed for comfort and a polished look, they pair effortlessly with shirts, tops, and blazers for work or casual wear.",
+    "category": "women's clothing",
+    "image": "./Assests/women_18.avif",
+    "rating": {
+      "rate": 3.8,
+      "count": 151
     }
   },
   {
@@ -23,6 +35,19 @@ let Products = [
       "count": 259
     }
   },
+
+  {
+    "id": 26,
+    "title": "Shein Ribbed Fitted Top With Placement Numberic print",
+    "price": 399,
+    "description": "Make a bold style statement with this Shein ribbed fitted top featuring a placement numeric print. Designed for a flattering fit, it offers comfort, stretch, and effortless everyday fashion.",
+    "category": "women's clothing",
+    "image": "./Assests/women_6.avif",
+    "rating": {
+      "rate": 3.3,
+      "count": 156
+    }
+  },
   {
     "id": 3,
     "title": "Men Printed Olive Regular Fit Crew-Neck T-Shirts",
@@ -33,6 +58,30 @@ let Products = [
     "rating": {
       "rate": 3.9,
       "count": 500
+    }
+  },
+  {
+    "id": 24,
+    "title": "Mustard Floral Print Straight Kurta",
+    "price": 659,
+    "description": "Brighten your ethnic collection with this mustard floral print straight kurta. Crafted for comfort and elegance, it pairs effortlessly with leggings or palazzos, making it perfect for everyday and festive wear.",
+    "category": "women's clothing",
+    "image": "./Assests/women_4.avif",
+    "rating": {
+      "rate": 3.8,
+      "count": 188
+    }
+  },
+  {
+    "id": 25,
+    "title": "All-Over Printed A-Line Kurta Set",
+    "price": 1599,
+    "description": "Elevate your ethnic style with this all-over printed A-line kurta set. Designed for elegance and comfort, it offers a flattering fit, making it perfect for festive celebrations and everyday wear.",
+    "category": "women's clothing",
+    "image": "./Assests/women_5.avif",
+    "rating": {
+      "rate": 4.5,
+      "count": 111
     }
   },
   {
@@ -72,6 +121,18 @@ let Products = [
     }
   },
   {
+    "id": 27,
+    "title": "Ankle Length Fly With Button Closure Jeans",
+    "price": 1899,
+    "description": "Step out in style with these ankle-length jeans featuring a secure button and fly closure. Designed for comfort and a flattering fit, they pair effortlessly with tops, shirts, and sneakers.",
+    "category": "women's clothing",
+    "image": "./Assests/women_7.avif",
+    "rating": {
+      "rate": 4.4,
+      "count": 123
+    }
+  },
+  {
     "id": 7,
     "title": "Men Mid-washed Loose Fit Jeans",
     "price": 1799,
@@ -93,6 +154,30 @@ let Products = [
     "rating": {
       "rate": 3.9,
       "count": 100
+    }
+  },
+  {
+    "id": 34,
+    "title": "Boat Neck Floral Lace HandKerChief Top",
+    "price": 799,
+    "description": "Add feminine charm to your wardrobe with this boat neck floral lace handkerchief top. Featuring elegant lace detailing and a flattering silhouette, it's perfect for casual outings and special occasions.",
+    "category": "women's clothing",
+    "image": "./Assests/women_14.avif",
+    "rating": {
+      "rate": 4.2,
+      "count": 155
+    }
+  },
+  {
+    "id": 35,
+    "title": "Poplin Top With Puff Sleeves",
+    "price": 1099,
+    "description": "Refresh your wardrobe with this poplin top featuring stylish puff sleeves. Designed for comfort and elegance, it offers a flattering fit that pairs beautifully with jeans, skirts, or tailored trousers.",
+    "category": "women's clothing",
+    "image": "./Assests/women_15.avif",
+    "rating": {
+      "rate": 4.0,
+      "count": 111
     }
   },
   {
@@ -132,6 +217,19 @@ let Products = [
     }
   },
   {
+    "id": 23,
+    "title": "Women Embroidered Flared Kurta",
+    "price": 1299,
+    "description": "Make a graceful statement with this women's embroidered flared kurta. Featuring elegant embroidery and a flowing silhouette, it delivers comfort, charm, and timeless style for festive and special occasions.",
+    "category": "women's clothing",
+    "image": "./Assests/women_3.avif",
+    "rating": {
+      "rate": 4.8,
+      "count": 166
+    }
+  },
+
+  {
     "id": 12,
     "title": "Men Blue Mid-washed Loose Fit Jeans",
     "price": 2599,
@@ -153,186 +251,6 @@ let Products = [
     "rating": {
       "rate": 4.3,
       "count": 250
-    }
-  },
-  {
-    "id": 14,
-    "title": "Straight Fit Full length Fixed Waist Stone Washed Trouser",
-    "price": 2299,
-    "description": "Elevate your everyday look with these stone-washed straight-fit trousers. Featuring a fixed waist and full-length design, they deliver timeless style, lasting comfort, and effortless versatility for casual and smart-casual outfits.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_14.avif",
-    "rating": {
-      "rate": 4.2,
-      "count": 140
-    }
-  },
-  {
-    "id": 15,
-    "title": "Shein Baggy Fit Full length Stone Washed Jeans",
-    "price": 1799,
-    "description": "Add a trendy edge to your wardrobe with these stone-washed baggy-fit jeans. Designed for all-day comfort and effortless style, they pair perfectly with oversized T-shirts, hoodies, and sneakers.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_15.avif",
-    "rating": {
-      "rate": 3.4,
-      "count": 235
-    }
-  },
-  {
-    "id": 16,
-    "title": "Relaxed Fit Cargo Pants",
-    "price": 1299,
-    "description": "Experience everyday comfort with these relaxed-fit cargo pants. Featuring spacious utility pockets and a modern silhouette, they combine functionality with effortless style, making them perfect for casual outings and daily wear.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_16.avif",
-    "rating": {
-      "rate": 3.7,
-      "count": 340
-    }
-  },
-  {
-    "id": 17,
-    "title": "Men Relaxed FiT Mid-Rise Trousers",
-    "price": 899,
-    "description": "Enjoy all-day comfort with these men's relaxed-fit mid-rise trousers. Designed for a modern look and easy movement, they pair effortlessly with shirts, polos, and T-shirts for versatile everyday style.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_17.avif",
-    "rating": {
-      "rate": 3.2,
-      "count": 679
-    }
-  },
-  {
-    "id": 18,
-    "title": "Men Patterend Regular Fit Shirt",
-    "price": 1099,
-    "description": "Upgrade your wardrobe with this men's patterned regular-fit shirt. Crafted for comfort and timeless style, it pairs effortlessly with jeans or trousers, making it ideal for casual and semi-formal occasions.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_18.avif",
-    "rating": {
-      "rate": 4.7,
-      "count": 130
-    }
-  },
-  {
-    "id": 19,
-    "title": "Embroidered Regular Fit Kurta",
-    "price": 1399,
-    "description": "Celebrate timeless elegance with this embroidered regular-fit kurta. Featuring intricate detailing and a comfortable fit, it's perfect for festive occasions, family gatherings, and traditional celebrations with effortless style.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_19.avif",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  {
-    "id": 20,
-    "title": "Slim Fit Leaf Print Short Kurta With Collar",
-    "price": 859,
-    "description": "Refresh your ethnic wardrobe with this slim-fit leaf print short kurta. Featuring a stylish collar and modern design, it offers comfort, sophistication, and effortless style for casual and festive occasions.",
-    "category": "men's clothing",
-    "image": "./Assests/mens_20.avif",
-    "rating": {
-      "rate": 3.8,
-      "count": 145
-    }
-  },
-  {
-    "id": 21,
-    "title": "Women Floral Print Straight Kurta",
-    "price": 499,
-    "description": "Enhance your everyday elegance with this women's floral print straight kurta. Designed for comfort and timeless charm, it pairs beautifully with leggings, pants, or palazzos for versatile ethnic style.",
-    "category": "women's clothing",
-    "image": "./Assests/women_1.avif",
-    "rating": {
-      "rate": 4.5,
-      "count": 165
-    }
-  },
-  {
-    "id": 22,
-    "title": "Jacquard Yoke Straight Kurta",
-    "price": 699,
-    "description": "Add timeless elegance to your wardrobe with this jacquard yoke straight kurta. Designed for comfort and sophistication, it offers a graceful look, perfect for festive celebrations and everyday ethnic wear.",
-    "category": "women's clothing",
-    "image": "./Assests/women_2.avif",
-    "rating": {
-      "rate": 4.0,
-      "count": 115
-    }
-  },
-  {
-    "id": 23,
-    "title": "Women Embroidered Flared Kurta",
-    "price": 1299,
-    "description": "Make a graceful statement with this women's embroidered flared kurta. Featuring elegant embroidery and a flowing silhouette, it delivers comfort, charm, and timeless style for festive and special occasions.",
-    "category": "women's clothing",
-    "image": "./Assests/women_3.avif",
-    "rating": {
-      "rate": 4.8,
-      "count": 166
-    }
-  },
-  {
-    "id": 24,
-    "title": "Mustard Floral Print Straight Kurta",
-    "price": 659,
-    "description": "Brighten your ethnic collection with this mustard floral print straight kurta. Crafted for comfort and elegance, it pairs effortlessly with leggings or palazzos, making it perfect for everyday and festive wear.",
-    "category": "women's clothing",
-    "image": "./Assests/women_4.avif",
-    "rating": {
-      "rate": 3.8,
-      "count": 188
-    }
-  },
-  {
-    "id": 25,
-    "title": "All-Over Printed A-Line Kurta Set",
-    "price": 1599,
-    "description": "Elevate your ethnic style with this all-over printed A-line kurta set. Designed for elegance and comfort, it offers a flattering fit, making it perfect for festive celebrations and everyday wear.",
-    "category": "women's clothing",
-    "image": "./Assests/women_5.avif",
-    "rating": {
-      "rate": 4.5,
-      "count": 111
-    }
-  },
-  {
-    "id": 26,
-    "title": "Shein Ribbed Fitted Top With Placement Numberic print",
-    "price": 399,
-    "description": "Make a bold style statement with this Shein ribbed fitted top featuring a placement numeric print. Designed for a flattering fit, it offers comfort, stretch, and effortless everyday fashion.",
-    "category": "women's clothing",
-    "image": "./Assests/women_6.avif",
-    "rating": {
-      "rate": 3.3,
-      "count": 156
-    }
-  },
-  {
-    "id": 27,
-    "title": "Ankle Length Fly With Button Closure Jeans",
-    "price": 1899,
-    "description": "Step out in style with these ankle-length jeans featuring a secure button and fly closure. Designed for comfort and a flattering fit, they pair effortlessly with tops, shirts, and sneakers.",
-    "category": "women's clothing",
-    "image": "./Assests/women_7.avif",
-    "rating": {
-      "rate": 4.4,
-      "count": 123
-    }
-  },
-  {
-    "id": 28,
-    "title": "Ankle Length Contrast Stripped Jeans",
-    "price": 1559,
-    "description": "Add a trendy touch to your wardrobe with these ankle-length contrast striped jeans. Designed for comfort and modern style, they pair effortlessly with casual tops, T-shirts, and sneakers for everyday wear.",
-    "category": "women's clothing",
-    "image": "./Assests/women_8.avif",
-    "rating": {
-      "rate": 3.2,
-      "count": 56
     }
   },
   {
@@ -360,15 +278,76 @@ let Products = [
     }
   },
   {
-    "id": 31,
-    "title": "Adjustable Spaghetti Strap Bodycon dress",
-    "price": 1899,
-    "description": "Turn heads in this adjustable spaghetti strap bodycon dress. Designed to flatter your silhouette, it offers a comfortable fit, elegant style, and confidence for parties, dinners, and special occasions.",
-    "category": "women's clothing",
-    "image": "./Assests/women_11.avif",
+    "id": 14,
+    "title": "Straight Fit Full length Fixed Waist Stone Washed Trouser",
+    "price": 2299,
+    "description": "Elevate your everyday look with these stone-washed straight-fit trousers. Featuring a fixed waist and full-length design, they deliver timeless style, lasting comfort, and effortless versatility for casual and smart-casual outfits.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_14.avif",
     "rating": {
-      "rate": 4.8,
-      "count": 44
+      "rate": 4.2,
+      "count": 140
+    }
+  },
+
+  {
+    "id": 17,
+    "title": "Men Relaxed FiT Mid-Rise Trousers",
+    "price": 899,
+    "description": "Enjoy all-day comfort with these men's relaxed-fit mid-rise trousers. Designed for a modern look and easy movement, they pair effortlessly with shirts, polos, and T-shirts for versatile everyday style.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_17.avif",
+    "rating": {
+      "rate": 3.2,
+      "count": 679
+    }
+  },
+  {
+    "id": 21,
+    "title": "Women Floral Print Straight Kurta",
+    "price": 499,
+    "description": "Enhance your everyday elegance with this women's floral print straight kurta. Designed for comfort and timeless charm, it pairs beautifully with leggings, pants, or palazzos for versatile ethnic style.",
+    "category": "women's clothing",
+    "image": "./Assests/women_1.avif",
+    "rating": {
+      "rate": 4.5,
+      "count": 165
+    }
+  },
+  {
+    "id": 18,
+    "title": "Men Patterend Regular Fit Shirt",
+    "price": 1099,
+    "description": "Upgrade your wardrobe with this men's patterned regular-fit shirt. Crafted for comfort and timeless style, it pairs effortlessly with jeans or trousers, making it ideal for casual and semi-formal occasions.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_18.avif",
+    "rating": {
+      "rate": 4.7,
+      "count": 130
+    }
+  },
+  {
+    "id": 22,
+    "title": "Jacquard Yoke Straight Kurta",
+    "price": 699,
+    "description": "Add timeless elegance to your wardrobe with this jacquard yoke straight kurta. Designed for comfort and sophistication, it offers a graceful look, perfect for festive celebrations and everyday ethnic wear.",
+    "category": "women's clothing",
+    "image": "./Assests/women_2.avif",
+    "rating": {
+      "rate": 4.0,
+      "count": 115
+    }
+  },
+  {
+    "id": 19,
+    "title": "Embroidered Regular Fit Kurta",
+    "price": 1399,
+    "description": "Celebrate timeless elegance with this embroidered regular-fit kurta. Featuring intricate detailing and a comfortable fit, it's perfect for festive occasions, family gatherings, and traditional celebrations with effortless style.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_19.avif",
+    "rating": {
+      "rate": 4.5,
+      "count": 146
     }
   },
   {
@@ -396,27 +375,42 @@ let Products = [
     }
   },
   {
-    "id": 34,
-    "title": "Boat Neck Floral Lace HandKerChief Top",
-    "price": 799,
-    "description": "Add feminine charm to your wardrobe with this boat neck floral lace handkerchief top. Featuring elegant lace detailing and a flattering silhouette, it's perfect for casual outings and special occasions.",
-    "category": "women's clothing",
-    "image": "./Assests/women_14.avif",
+    "id": 20,
+    "title": "Slim Fit Leaf Print Short Kurta With Collar",
+    "price": 859,
+    "description": "Refresh your ethnic wardrobe with this slim-fit leaf print short kurta. Featuring a stylish collar and modern design, it offers comfort, sophistication, and effortless style for casual and festive occasions.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_20.avif",
     "rating": {
-      "rate": 4.2,
-      "count": 155
+      "rate": 3.8,
+      "count": 145
     }
   },
+
+
   {
-    "id": 35,
-    "title": "Poplin Top With Puff Sleeves",
-    "price": 1099,
-    "description": "Refresh your wardrobe with this poplin top featuring stylish puff sleeves. Designed for comfort and elegance, it offers a flattering fit that pairs beautifully with jeans, skirts, or tailored trousers.",
+    "id": 28,
+    "title": "Ankle Length Contrast Stripped Jeans",
+    "price": 1559,
+    "description": "Add a trendy touch to your wardrobe with these ankle-length contrast striped jeans. Designed for comfort and modern style, they pair effortlessly with casual tops, T-shirts, and sneakers for everyday wear.",
     "category": "women's clothing",
-    "image": "./Assests/women_15.avif",
+    "image": "./Assests/women_8.avif",
     "rating": {
-      "rate": 4.0,
-      "count": 111
+      "rate": 3.2,
+      "count": 56
+    }
+  },
+
+  {
+    "id": 31,
+    "title": "Adjustable Spaghetti Strap Bodycon dress",
+    "price": 1899,
+    "description": "Turn heads in this adjustable spaghetti strap bodycon dress. Designed to flatter your silhouette, it offers a comfortable fit, elegant style, and confidence for parties, dinners, and special occasions.",
+    "category": "women's clothing",
+    "image": "./Assests/women_11.avif",
+    "rating": {
+      "rate": 4.8,
+      "count": 44
     }
   },
   {
@@ -444,15 +438,27 @@ let Products = [
     }
   },
   {
-    "id": 38,
-    "title": "Women Regular Fit Flat-Front Trouser",
-    "price": 899,
-    "description": "Upgrade your wardrobe with these women's regular-fit flat-front trousers. Designed for comfort and a polished look, they pair effortlessly with shirts, tops, and blazers for work or casual wear.",
-    "category": "women's clothing",
-    "image": "./Assests/women_18.avif",
+    "id": 15,
+    "title": "Shein Baggy Fit Full length Stone Washed Jeans",
+    "price": 1799,
+    "description": "Add a trendy edge to your wardrobe with these stone-washed baggy-fit jeans. Designed for all-day comfort and effortless style, they pair perfectly with oversized T-shirts, hoodies, and sneakers.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_15.avif",
     "rating": {
-      "rate": 3.8,
-      "count": 151
+      "rate": 3.4,
+      "count": 235
+    }
+  },
+  {
+    "id": 16,
+    "title": "Relaxed Fit Cargo Pants",
+    "price": 1299,
+    "description": "Experience everyday comfort with these relaxed-fit cargo pants. Featuring spacious utility pockets and a modern silhouette, they combine functionality with effortless style, making them perfect for casual outings and daily wear.",
+    "category": "men's clothing",
+    "image": "./Assests/mens_16.avif",
+    "rating": {
+      "rate": 3.7,
+      "count": 340
     }
   },
   {
@@ -497,25 +503,78 @@ women.addEventListener("click", () => {
 })
 let all = document.getElementById("all")
 all.addEventListener("click", () => {
-  main()
+  currentPage = 1;
+  filteredProducts = Products;
+  updatePage();
 })
+const container = document.getElementById("container");
 
-function main() {
-  //   let data= Products.filter((ele)=>{      
-  //    return ele.category.includes("clothing");
-  //      })
-  append(Products);
+function scrollToProducts() {
+  container.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
 
+const itemsPerPage = 16;
+let currentPage = 1;
+
+let filteredProducts = [...Products];
+
+const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+const pageInfo = document.getElementById("page-info");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+
+
+function updatePage() {
+  append(filteredProducts, currentPage);
+
+  pageInfo.innerText = `${currentPage} / ${Math.ceil(filteredProducts.length / itemsPerPage)}`;
+
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === totalPages;
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    updatePage();
+    scrollToProducts();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentPage < totalPages) {
+    currentPage++;
+    updatePage();
+    scrollToProducts();
+  }
+});
+
+// Initial render
+updatePage();
+
+function main() {
+  updatePage()
+}
 main()
 
 
-function append(data) {
+function append(data, page) {
+
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  const paginatedData = data.slice(start, end);
+
   let container = document.getElementById("container")
   container.innerHTML = null
 
 
-  data.forEach(el => {
+  paginatedData.forEach(el => {
     let box = document.createElement("div");
     box.setAttribute("class", "box_div");
 
@@ -546,13 +605,26 @@ function append(data) {
       localStorage.setItem("wishlist", JSON.stringify(wishdata));
       console.log("data wishlisted")
 
-      append(data)
+      append(data, page)
     })
     let img = document.createElement("img");
     img.src = el.image;
     let title = document.createElement("h3");
     title.setAttribute('class', 'title')
     title.innerText = el.title;
+
+    img.addEventListener('click', () => {
+      localStorage.setItem('clicked product', JSON.stringify(el))
+      window.location = './SingleProduct.html'
+
+    })
+
+    title.addEventListener('click', () => {
+      localStorage.setItem('clicked product', JSON.stringify(el))
+      window.location = './SingleProduct.html'
+
+    })
+
 
     let priceAndHeart = document.createElement('div');
     priceAndHeart.setAttribute('class', 'priceAndHeart')
@@ -581,21 +653,35 @@ function append(data) {
 
 
 const low_products = () => {
-  const lowProducts = [...Products].sort((a, b) => a.price - b.price);
-  append(lowProducts);
+  currentPage = 1;
+
+  filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+
+  updatePage();
 };
 const men_products = () => {
   console.log("callled men")
-  let menProducts = Products.filter(el => {
-    return el.category == "men's clothing"
-  })
-  append(menProducts)
+  currentPage = 1;   // Start from first page
+
+  filteredProducts = Products.filter(el =>
+    el.category === "men's clothing"
+  );
+
+  append(filteredProducts, currentPage);
+
+  updatePage();
 }
+
 const women_products = () => {
-  let womenProducts = Products.filter(el => {
-    return el.category == "women's clothing"
-  })
-  append(womenProducts)
+  currentPage = 1;   // Start from first page
+
+  filteredProducts = Products.filter(el =>
+    el.category === "women's clothing"
+  );
+
+  append(filteredProducts, currentPage);
+
+  updatePage();
 }
 
 //href pages
@@ -615,4 +701,6 @@ document.getElementById("cartIcon").addEventListener("click", () => {
 document.getElementById("navBar1").addEventListener("click", () => {
   window.location = "./index.html"
 })
+
+
 

@@ -278,10 +278,9 @@
 /* CAROSOULE */
 .carousel {
     width: 97%;
-    height: 400px;
+    height: 480px;
     overflow: hidden;
     position: relative;
-    border-radius: 20px;
     margin: 10px 20px;
 }
 
@@ -293,7 +292,7 @@
 
 .slides img {
     width: 325px;
-    height: 325px;
+    height: 425px;
     object-fit: cover;
     flex-shrink: 0;
     margin: 0px 10px;
@@ -321,6 +320,8 @@
 .next {
     right: 10px;
 }
+
+/*-------------footer----------------*/
 
 #main_footer {
     background-color: black;
@@ -447,6 +448,10 @@
 @media all and (max-width: 800px) {
     #category {
         display: none;
+    }
+
+    .banner {
+        margin-top: 20px;
     }
 
     .black_p {

@@ -230,11 +230,19 @@
     #line_2 {
         display: none;
     }
+
+    #loader img {
+        width: 300px;
+    }
 }
 
 @media all and (max-width: 425px) {
 
     #topNavBar {
         display: none;
+    }
+
+    #loader img {
+        width: 250px;
     }
 }

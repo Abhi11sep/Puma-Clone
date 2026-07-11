@@ -8,9 +8,33 @@ for (let i = 0; i < cart.length; i++) {
 }
 
 function showCartlist(cart) {
-
     cont.innerHTML = "";
     tot_div.innerHTML = "";
+    if (cart.length === 0) {
+
+        cont.classList.add("empty");
+        tot_div.style.display = "none";
+
+        cont.innerHTML = `
+        <div class="empty-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h2>Your Cart is Empty</h2>
+            <p>Looks like you haven't added anything to your cart yet.</p>
+            <button id="shopNowBtn">Continue Shopping</button>
+        </div>
+    `;
+
+        document.getElementById("shopNowBtn").addEventListener("click", () => {
+            window.location = "./new.html";
+        });
+
+        return;
+    }
+
+    cont.classList.remove("empty");
+    tot_div.style.display = "block";
+
+
     cart.forEach(el => {
         let box = document.createElement("div");
         box.setAttribute("class", "box");
@@ -23,10 +47,13 @@ function showCartlist(cart) {
         price.setAttribute('id', 'price')
         price.innerHTML = `&#8377 ${el.price}`
         let rm_btn = document.createElement("button")
-        rm_btn.setAttribute('class', 'rm_btn')
-        rm_btn.innerText = "Remove";
+        rm_btn.className = "icon-btn remove-btn";
+        rm_btn.innerHTML = '<i class="fa-solid fa-trash"></i>';
         rm_btn.addEventListener("click", () => {
-            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            let x = cart.findIndex(item =>
+                item.id === el.id &&
+                item.size === el.size
+            ); //item always be there (not -1)
             cart.splice(x, 1)
             total = total - (el.price * el.qty)
             localStorage.setItem("cart", JSON.stringify(cart));
@@ -38,7 +65,10 @@ function showCartlist(cart) {
         inc_btn.setAttribute('id', 'inc_btn')
         inc_btn.innerText = "+";
         inc_btn.addEventListener("click", () => {
-            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            let x = cart.findIndex(item =>
+                item.id === el.id &&
+                item.size === el.size
+            );//item always be there (not -1)
             cart[x].qty++;
             localStorage.setItem("cart", JSON.stringify(cart));
             total = total + (el.price)
@@ -49,11 +79,19 @@ function showCartlist(cart) {
         qty.setAttribute('class', 'qty')
         qty.innerText = el.qty;
 
+
+        let size_box = document.createElement("div");
+        size_box.setAttribute("class", "size_box")
+        size_box.innerHTML = `Size : ${el.size}`;
+
         let dec_btn = document.createElement("button")
         dec_btn.setAttribute('id', 'dec_btn')
         dec_btn.innerText = "-";
         dec_btn.addEventListener("click", () => {
-            let x = cart.findIndex(item => item.id === el.id); //item always be there (not -1)
+            let x = cart.findIndex(item =>
+                item.id === el.id &&
+                item.size === el.size
+            ); //item always be there (not -1)
             if (cart[x].qty === 1) {
                 cart.splice(x, 1)
             } else {
@@ -74,7 +112,7 @@ function showCartlist(cart) {
 
 
         qty_box.append(dec_btn, qty, inc_btn)
-        btm_box.append(price, rm_btn, qty_box)
+        btm_box.append(price, size_box, rm_btn, qty_box)
         details.append(title, btm_box)
         box.append(img, details);
         cont.append(box);
@@ -99,11 +137,14 @@ All transactions are protected using industry-standard encryption. Your privacy 
     let pay_btn = document.createElement("button")
     pay_btn.setAttribute("class", "btn")
     pay_btn.addEventListener('click', () => {
+        localStorage.setItem('cart', JSON.stringify([]))
         window.location = "./Payment.html"
     })
     pay_btn.innerText = "Make Payment (UPI / Cards)";
     let cod_btn = document.createElement("button")
+
     cod_btn.addEventListener('click', () => {
+        localStorage.setItem('cart', JSON.stringify([]))
         window.location = "./Payment.html"
     })
     cod_btn.setAttribute("class", "btn")
